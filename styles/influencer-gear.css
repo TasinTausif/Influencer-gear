@@ -1,0 +1,120 @@
+/* Importing Poppins font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Keeping only 600 and 700 as per figma design */
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* CSS Variables */
+:root{
+    --text-color: rgba(58, 58, 58, 1);
+    --btn-color: rgba(224, 44, 109, 1);
+}
+
+/* Shared Styles*/
+.display-flex{
+    display: flex;
+}
+
+/* Header Styles */
+header{
+    max-width: 1500px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+/* nav styles */
+nav{
+    justify-content: space-between;
+}
+.nav-item{
+    list-style: none;
+    margin-right: 30px;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+}
+.brand{
+    font-size: 1.5rem;
+}
+.navbar{
+    font-size: 1rem;
+}
+/* Brand info Styles */
+.brand-info{
+    margin: 60px auto;
+    gap: 135px;
+}
+.brand-title{
+    font-size: 4rem;
+}
+.brand-description{
+    font-size: 1 rem;
+}
+.proceed-button{
+    width: 190px;
+    background-color: var(--btn-color);
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 41px;
+}
+.brand-images{
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+.upper-image{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.behind-image{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+/* Brand Partner Styles */
+.brand-partners{
+    max-width: 1200px;
+    margin-top: 90px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50%, rgba(192, 204, 218, 0.1) 100%);
+    border-image-slice: 1; /* Required to make the gradient visible */
+}
+.brand-partners img{
+    margin: 30px auto;
+}
+
+/* Main Content Styles */
+
+/* Footer Styles */
+
+/* Mobile View */
+@media screen and (max-width: 576px) {
+    nav,
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .brand-info{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .brand-details{
+        text-align: center;
+    }
+    .brand-partners{
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+}
